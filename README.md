@@ -1,2 +1,2 @@
 # shopping-repo
-shopping
+shoppings

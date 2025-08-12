@@ -1,15 +1,21 @@
 name: Poster Upload Workflow
 
+# Run the workflow on any push to the repository
 on:
   push:
+    branches:
+      - '**'
 
 jobs:
-  upload-check:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-      - name: Show confirmation message
-        run: echo "✅ Poster Uploaded Successfully"
+      - name: Show repo files (optional)
+        run: ls -la
+
+      - name: Poster Uploaded Successfully
+        run: echo "Poster Uploaded Successfully"
